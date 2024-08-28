@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "CommonJS",
+    "lib": ["ESNext", "DOM"],
+    "moduleResolution": "Node",
+    "strict": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "jsx": "react",
+    "baseUrl": ".",
+    "outDir": "./dist/cjs",
+    "isolatedModules": true,
+    "declaration": true,
+    "skipLibCheck": true
+  },
+  "include": ["./src", "example/src/test-highlights.ts"]
+}

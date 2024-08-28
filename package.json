@@ -1,0 +1,63 @@
+{
+  "name": "react-pdf-annotator-component",
+  "type": "module",
+  "version": "1.0.1",
+  "description": "A basic out of the box PDF annotator component",
+  "author": "Nicholas Gingrich <gingrichnicholas@gmail.com>",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Nicholas Gingrich",
+      "email": "gingrichnicholas@gmail.com"
+    }
+  ],
+  "keywords": [
+    "pdf",
+    "highlight",
+    "annotator",
+    "react-component",
+    "react"
+  ],
+  "files": [
+    "dist"
+  ],
+  "types": "./dist/esm/index.d.ts",
+  "module": "./dist/esm/index.js",
+  "main": "./dist/cjs/index.js",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "(cd ./example && vite --force)",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && npm run build:cjs && npm run build:esm && npm run build:copy-styles",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:esm": "tsc -p tsconfig.json",
+    "build:copy-styles": "cp -r style dist/esm && cp -r style dist/cjs"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "dependencies": {
+    "lodash.debounce": "^4.0.8",
+    "pdfjs-dist": "^4.5.136",
+    "react-pdf-annotator-component": "^1.0.1",
+    "react-pdf-highlighter-extended": "git+https://github.com/nic-iqmo/react-pdf-highlighter-extended.git#main",
+    "react-rnd": "^10.4.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicholasGingrich/react-pdf-highlighter-extended"
+  },
+  "bugs": {
+    "url": "https://github.com/NicholasGingrich/react-pdf-highlighter-extended/issues"
+  },
+  "devDependencies": {
+    "@types/lodash.debounce": "^4.0.9",
+    "@types/node": "^20.14.9",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "typescript": "^5.4.5",
+    "vite": "^5.3.3"
+  }
+}
